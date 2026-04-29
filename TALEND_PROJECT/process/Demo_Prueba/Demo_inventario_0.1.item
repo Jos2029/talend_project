@@ -4,7 +4,7 @@
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="160" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -105,19 +105,19 @@
     <elementParameter field="TEXT" name="NB_ROWS" value="100" show="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="id_producto" id="0"/>
-      <elementValue elementRef="ARRAY" value="Numeric.sequence(&quot;s1&quot;,1,1)" id="1"/>
+      <elementValue elementRef="ARRAY" value="Numeric.sequence(&quot;s1&quot; ,1 ,1 )" id="1"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Nombre" id="2"/>
       <elementValue elementRef="ARRAY" value="TalendDataGenerator.getFirstName()" id="3"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Categoria" id="4"/>
       <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6)" id="5"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Stock_Inicial" id="6"/>
-      <elementValue elementRef="ARRAY" value="TalendDate.getPartOfDate(&quot;DAY_OF_WEEK&quot; ,TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, &quot;2010-12-26&quot;) )" id="7"/>
+      <elementValue elementRef="ARRAY" value="Numeric.random(1 ,15 )" id="7"/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRowGenerator_1">
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot;&quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1&quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Nombre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
@@ -126,7 +126,7 @@
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getPartOfDate&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;partName&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;DAY_OF_WEEK\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;date&quot;,&quot;PARAMETER_VALUE&quot;:&quot;TalendDate.parseDate(\&quot;yyyy-MM-dd\&quot;, \&quot;2010-12-26\&quot;) &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDate&quot;}"/>
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;15 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
     </metadata>
   </node>
@@ -154,13 +154,13 @@
       <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
@@ -171,15 +171,15 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="movimiento" expression="row2.Entrada_Salida.equals(&quot;entrada&quot;) ? row2.Cantidad : -row2.Cantidad " type="id_Integer"/>
+        <mapperTableEntries name="movimiento" expression="row2.Cantidad == null ? 0 : (&quot;entrada&quot;.equals(row2.Entrada_Salida) ? row2.Cantidad : -row2.Cantidad) " type="id_Integer"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="Salida">
         <mapperTableEntries name="Nombre" expression="row1.Nombre " type="id_String" nullable="true"/>
         <mapperTableEntries name="Categoria" expression="row1.Categoria " type="id_String" nullable="true"/>
         <mapperTableEntries name="Stock_Inicial" expression="row1.Stock_Inicial " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Entrada_Salida" expression="row2.Entrada_Salida " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Entrada_Salida" expression="row2.Entrada_Salida " type="id_String" nullable="true"/>
         <mapperTableEntries name="Cantidad" expression="row2.Cantidad " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Salida" expression="row2.Salida " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Salida" expression="row2.Salida " type="id_String" nullable="true"/>
         <mapperTableEntries name="id_producto" expression="row1.id_producto" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="stock_Actual" expression="row1.Stock_Inicial + Var.movimiento" type="id_Integer" nullable="true"/>
       </outputTables>
@@ -191,9 +191,9 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id_producto" expression="row1.id_producto " type="id_Integer" nullable="true" operator="="/>
-        <mapperTableEntries name="Entrada_Salida" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Entrada_Salida" type="id_String" nullable="true"/>
         <mapperTableEntries name="Cantidad" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Salida" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Salida" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -202,35 +202,40 @@
     <elementParameter field="TEXT" name="NB_ROWS" value="100" show="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="id_producto" id="0"/>
-      <elementValue elementRef="ARRAY" value="Numeric.sequence(&quot;s1&quot; ,1 ,1 )" id="1"/>
+      <elementValue elementRef="ARRAY" value="Numeric.sequence(&quot;s2&quot; ,1 ,1 )" id="1"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Entrada_Salida" id="2"/>
-      <elementValue elementRef="ARRAY" value="TalendDate.getPartOfDate(&quot;DAY_OF_WEEK&quot;,TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, &quot;2010-12-26&quot;))" id="3"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getFirstName()" id="3"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Cantidad" id="4"/>
-      <elementValue elementRef="ARRAY" value="TalendDate.getPartOfDate(&quot;DAY_OF_WEEK&quot;,TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, &quot;2010-12-26&quot;))" id="5"/>
+      <elementValue elementRef="ARRAY" value="Numeric.random(1 ,20 )" id="5"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Salida" id="6"/>
-      <elementValue elementRef="ARRAY" value="TalendDate.getPartOfDate(&quot;DAY_OF_WEEK&quot; ,TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, &quot;2010-12-26&quot;) )" id="7"/>
+      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6 )" id="7"/>
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRowGenerator_2">
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s2\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getPartOfDate&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;partName&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;DAY_OF_WEEK\&quot;&quot;},{&quot;PARAMETER_NAME&quot;:&quot;date&quot;,&quot;PARAMETER_VALUE&quot;:&quot;TalendDate.parseDate(\&quot;yyyy-MM-dd\&quot;, \&quot;2010-12-26\&quot;)&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDate&quot;}"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getPartOfDate&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;partName&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;DAY_OF_WEEK\&quot;&quot;},{&quot;PARAMETER_NAME&quot;:&quot;date&quot;,&quot;PARAMETER_VALUE&quot;:&quot;TalendDate.parseDate(\&quot;yyyy-MM-dd\&quot;, \&quot;2010-12-26\&quot;)&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDate&quot;}"/>
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;20 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
-      <column comment="" defaultValue="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getPartOfDate&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;partName&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;DAY_OF_WEEK\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;date&quot;,&quot;PARAMETER_VALUE&quot;:&quot;TalendDate.parseDate(\&quot;yyyy-MM-dd\&quot;, \&quot;2010-12-26\&quot;) &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDate&quot;}"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
     </metadata>
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="880" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_9" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
-    <elementParameter field="TABLE" name="CONDITIONS"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="stock_Actual" id="0"/>
+      <elementValue elementRef="FUNCTION" value="" id="1"/>
+      <elementValue elementRef="OPERATOR" value=">=" id="2"/>
+      <elementValue elementRef="RVALUE" value="0" id="3"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -244,13 +249,13 @@
       <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
@@ -268,13 +273,13 @@
       <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
@@ -292,13 +297,13 @@
       <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
@@ -310,17 +315,17 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="Nombre" id="0"/>
       <elementValue elementRef="LENGTH" value="10" id="1"/>
@@ -352,13 +357,13 @@
       <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
@@ -369,17 +374,17 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1000" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="Nombre" id="0"/>
       <elementValue elementRef="LENGTH" value="10" id="1"/>
@@ -413,13 +418,134 @@
       <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
-      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="stock_Actual" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="-80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tFileOutputDelimited" show="false"/>
+    <elementParameter field="TEXT" name="VERSION" value="0.101 (ALPHA)" show="false"/>
+    <elementParameter field="TEXT" name="FAMILY" value="File/Output" show="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false" show="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true" show="false"/>
+    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tFileOutputDelimited" show="false"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java" show="false"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Consultor Data IQ/Downloads/inventario_resultado.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;\t&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="CUSTOM"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" key="false" length="-1" name="Nombre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Categoria" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="stock_Actual" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1200" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Consultor Data IQ/Downloads/inventario_alertas.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;\t&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_2">
+      <column comment="" key="false" length="-1" name="Nombre" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Categoria" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Stock_Inicial" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Entrada_Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Cantidad" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Salida" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" defaultValue="" key="false" length="-1" name="id_producto" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
@@ -449,9 +575,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
   <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="93;174;241"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="93;174;241"/>
   </subjob>
 </talendfile:ProcessType>
