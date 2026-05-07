@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_DwW_EH8fEeqv5OUyPzpEiA" confirmationNeeded="false" hide="false" name="Default">
   <contextParameter xmi:id="_DwW_En8fEeqv5OUyPzpEiA" comment="" name="TDS_URL" prompt="TDS_URL?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="https://tds.us.cloud.talend.com/data-stewardship"/>
-  <contextParameter xmi:id="_DwW_E38fEeqv5OUyPzpEiA" comment="" name="TDC_User" prompt="TDC_User?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
-  <contextParameter xmi:id="_DwW_FH8fEeqv5OUyPzpEiA" comment="" name="TDC_Pass" prompt="TDC_Pass?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value=""/>
-  <contextParameter xmi:id="_DwW_GH8fEeqv5OUyPzpEiA" comment="" name="Directory" prompt="Directory?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:/Test/"/>
+  <contextParameter xmi:id="_DwW_E38fEeqv5OUyPzpEiA" comment="" name="TDC_User" prompt="TDC_User?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="josue.maza@dataiq.com.mx"/>
+  <contextParameter xmi:id="_DwW_FH8fEeqv5OUyPzpEiA" comment="" name="TDC_Pass" prompt="TDC_Pass?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:aCKF4yEf+B84+WVaB5fKlm0rr+Cdws3oVRKzW+nGxQArxtN3MYMgIP2a/+zGepjMnHdvI/Dg5c8xzFOByfigF1AKDp9BownA7D9ImCQ0fpNOKdJkFDXxnCUeeEo="/>
+  <contextParameter xmi:id="_DwW_GH8fEeqv5OUyPzpEiA" comment="" name="Directory" prompt="Directory?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:\Users\Consultor Data IQ\Documents\"/>
 </talendfile:ContextType>
