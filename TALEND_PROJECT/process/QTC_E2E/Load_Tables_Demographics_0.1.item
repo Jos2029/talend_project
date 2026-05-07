@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" name="TDS_URL" prompt="TDS_URL?" promptNeeded="false" repositoryContextId="_2-PwAAvGEeqkgILlMt0b2Q" type="id_String" value="https://tds.us.cloud.talend.com/data-stewardship" internalId="_l-YqYEoyEfGTC6ulj9RPFw"/>
+    <contextParameter comment="" name="TDS_URL" prompt="TDS_URL?" promptNeeded="false" repositoryContextId="_2-PwAAvGEeqkgILlMt0b2Q" type="id_String" value="https://tds.us.cloud.talend.com" internalId="_l-YqYEoyEfGTC6ulj9RPFw"/>
     <contextParameter comment="" name="TDC_User" prompt="TDC_User?" promptNeeded="false" repositoryContextId="_2-PwAAvGEeqkgILlMt0b2Q" type="id_String" value="josue.maza@dataiq.com.mx" internalId="_l-YqYUoyEfGTC6ulj9RPFw"/>
-    <contextParameter comment="" name="TDC_Pass" prompt="TDC_Pass?" promptNeeded="false" repositoryContextId="_2-PwAAvGEeqkgILlMt0b2Q" type="id_Password" value="enc:system.encryption.key.v1:CtRSoKPu/pcsmJ62r8xkXDuo84UXN/H9bl649NBOFX5jWgr8nrov5x6uEP6tNSsb+t6ndJuHIpFyT6s0crXv4AEluUDFv0uGmLshVQpOD1Ree3nwdkOZ80XIGOc=" internalId="_l-YqYkoyEfGTC6ulj9RPFw"/>
+    <contextParameter comment="" name="TDC_Pass" prompt="TDC_Pass?" promptNeeded="false" repositoryContextId="_2-PwAAvGEeqkgILlMt0b2Q" type="id_Password" value="enc:system.encryption.key.v1:Qey6XZWXQXUZid3JPCZc4y3G6smGagYXl87xX/AbkhZtBF1NBA==" internalId="_l-YqYkoyEfGTC6ulj9RPFw"/>
     <contextParameter comment="" name="Directory" prompt="Directory?" promptNeeded="false" repositoryContextId="_2-PwAAvGEeqkgILlMt0b2Q" type="id_Directory" value="C:\Users\Consultor Data IQ\Documents\" internalId="_l-YqY0oyEfGTC6ulj9RPFw"/>
     <contextParameter comment="" name="SF_UserID" prompt="SF_UserID?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="" internalId="_l-ZRcEoyEfGTC6ulj9RPFw"/>
     <contextParameter comment="" name="SF_Account" prompt="SF_Account?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="" internalId="_l-ZRcUoyEfGTC6ulj9RPFw"/>
